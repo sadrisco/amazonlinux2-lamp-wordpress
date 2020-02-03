@@ -27,7 +27,7 @@ echo '<VirtualHost *:80>
 
    <Directory "/var/www/html/${_SITE_URL_}">
        Require all granted
-       Options +Indexes
+       Options +Indexes 
    </Directory>
 
    ErrorLog logs/${_SITE_URL_}-error_log
