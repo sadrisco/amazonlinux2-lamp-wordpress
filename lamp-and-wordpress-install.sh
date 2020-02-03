@@ -1,7 +1,7 @@
 #!/bin/sh
 # Originally written by Artnic, updated by sadrisco
-# This is how I install apache + php + mysql + wordpress to get up and running in less than 1 minute
-# this works for an Amazon AMI instance. Other distros migh need changes to this script
+# This installs and run apache + php + mysql + wordpress in less than 1 minute
+# It works for an Amazon AMI 2 instance. Other distros migh need changes to this script
 # You can put this script to run when creating an instance at AWS Console. Once machine is up, everything is set up
 
 _SITE_URL_='site.example.com' # note that there's no protocol in the URL here
@@ -13,7 +13,7 @@ _WP_SITE_TITLE_='Wordpress Site Title'
 _WP_ADMIN_PASS_='WordpressAdminPassword'
 _WP_ADMIN_EMAIL_='WordpressAdminEmail' # once completed, server sends 'installation completed' email to this one
 
-# I usually do this to know which sites are installed in this machine quickly
+# do this to know which sites are installed in this machine quickly
 touch /home/ec2-user/${_SITE_URL_}
 
 sudo yum update -y
@@ -59,7 +59,7 @@ mysqladmin -uroot -p${_DB_ROOT_PASS_} create ${_DB_NAME_}
 sudo systemctl enable mariadb.service 
 sudo systemctl enable httpd
 
-# BONUS: installing Wordpress via wpcli with given URL and database
+# installing Wordpress via wpcli with given URL and database
 # You should remove lines below if you don't want to fresh install wordpress
 curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar
 chmod +x wp-cli.phar
