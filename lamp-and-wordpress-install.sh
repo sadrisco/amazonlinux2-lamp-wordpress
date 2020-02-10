@@ -31,7 +31,6 @@ sudo service mariadb.service restart
 
 # configuring httpd.conf and adding a site (VirtualHost) to it
 sudo mkdir -p /var/www/html/${_SITE_URL_}
-sudo chown apache:apache /var/www/html/${_SITE_URL_} -Rf
 sudo chmod +x /var/www/html/${_SITE_URL_} -Rf
 
 echo '<VirtualHost *:80>
@@ -75,3 +74,5 @@ cd /var/www/html/${_SITE_URL_}
 sudo /usr/local/bin/wp core download --allow-root
 sudo /usr/local/bin/wp core config --dbhost=localhost --dbname=${_DB_NAME_} --dbuser=${_DB_USER_} --dbpass=${_DB_USERPASS_} --allow-root
 sudo /usr/local/bin/wp core install --url=${_SITE_URL_} --title="${_WP_SITE_TITLE_}" --admin_name=admin --admin_password=${_WP_ADMIN_PASS_} --admin_email=${_WP_ADMIN_EMAIL_} --allow-root
+sudo chown apache:apache /var/www/html/${_SITE_URL_} -Rf
+
