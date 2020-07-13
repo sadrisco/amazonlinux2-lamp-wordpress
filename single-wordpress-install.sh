@@ -1,9 +1,10 @@
 #!/bin/sh
 # Originally written by Artnic, updated by sadrisco
-# You can put this script on an Amazon Linux AMI 2 instance to setup a LAMP Server quickly.
-# To configure a new instance, run "lamp-and-wordpress-install.sh".
+# You can put this script on an Amazon Linux AMI 2 to setup a Website quickly.
+# Requires a LAMP installation
 
-_SITE_URL_='site.example.com' # note that there's no protocol in the URL here
+
+_SITE_URL_='site.example.com' # don't use protocol
 _DB_ROOT_PASS_='ReallyStrongDatabaseRootPassword'
 _DB_USER_='MySQLUserAllowedToAccessFromOutside'
 _DB_USERPASS_='CreatedMySQLUsersPassword'
@@ -12,7 +13,7 @@ _WP_SITE_TITLE_='Wordpress Site Title'
 _WP_ADMIN_PASS_='WordpressAdminPassword'
 _WP_ADMIN_EMAIL_='WordpressAdminEmail' # once completed, server sends 'installation completed' email to this one
 
-# I usually do this to know which sites are installed in this machine quickly
+# Do this to know which sites are installed in this machine quickly
 touch /home/ec2-user/${_SITE_URL_}
 
 sudo yum update -y
