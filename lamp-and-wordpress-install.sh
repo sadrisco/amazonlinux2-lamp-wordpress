@@ -29,7 +29,7 @@ sudo yum install -y httpd mariadb-server
 sudo yum install mysql-server -y
 sudo service mariadb.service restart
 
-# configuring httpd.conf and adding a site (VirtualHost) to it
+# configuring httpd.conf and virtualhost
 sudo mkdir -p /var/www/html/${_SITE_URL_}
 sudo chmod +x /var/www/html/${_SITE_URL_} -Rf
 
