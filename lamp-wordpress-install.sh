@@ -1,5 +1,4 @@
 #!/bin/sh
-# Originally written by Artnic, updated by sadrisco
 # This installs and runs apache + php + mysql + wordpress in less than 1 minute
 # It works on Amazon Linux 2. Other distros migh need changes
 # You can put this script to run after creating an instance on AWS.
