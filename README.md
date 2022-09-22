@@ -1,5 +1,5 @@
 # LAMP Wordpress Install - Amazon Linux 2
-This script configure a LAMP Server and installs an Wordpress app in a fresh running instance with  Amazon Linux 2.
+This script configure a LAMP Server and installs an Wordpress app in a fresh running instance with  Amazon Linux 2 as OS.
 
 ## How to use? :computer:
 1 - Install git in your server
@@ -14,4 +14,4 @@ This script configure a LAMP Server and installs an Wordpress app in a fresh run
 4 - Run the script
 > ./amazonlinux2-lamp-wordpress/lamp-wordpress-install.sh
 
-5 - Grab a cup of coffee and wait, when finished, you will be able to access your fresh Wordpress installation by typing your IP address on the browser :)
+5 - Just wait. When finished, you will be able to access your fresh Wordpress installation by typing your IP address on the browser :)
